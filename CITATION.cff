@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+message: "If you use SphericalViewer in your research, please cite the software and identify the revision used."
+type: software
+title: "SphericalViewer: A MATLAB viewer for 360-degree VR images and videos"
+authors:
+  - family-names: Ban
+    given-names: Hiroshi
+    website: "https://github.com/hiroshiban"
+abstract: >-
+  MATLAB viewers for inspecting equirectangular 360-degree images and videos
+  during visual psychology and neuroscience stimulus preparation. Standard
+  MATLAB and optional Psychtoolbox/OpenGL renderers preview mono media or
+  one eye of over-under and side-by-side stereo media on a desktop display.
+keywords:
+  - MATLAB
+  - Psychtoolbox
+  - virtual reality
+  - 360-degree video
+  - vision science
+  - psychophysics
+license: BSD-2-Clause

@@ -1,0 +1,11 @@
+# Keep source and documentation portable; media remain ordinary Git binaries.
+* text=auto
+.gitattributes text eol=lf
+.gitignore text eol=lf
+*.m text eol=lf
+*.md text eol=lf
+*.txt text eol=lf
+*.cff text eol=lf
+*.jpg binary
+*.png binary
+*.mp4 binary

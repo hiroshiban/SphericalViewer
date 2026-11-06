@@ -1,0 +1,17 @@
+# MATLAB editor and temporary files
+*.asv
+*.m~
+*.autosave
+*.log
+matlab_crash_dump*
+
+# Local originals and verification output
+/backups/
+/.runtime/
+/qa/
+/doc/PUBLISHING.md
+
+# Operating-system files
+.DS_Store
+Thumbs.db
+Desktop.ini
