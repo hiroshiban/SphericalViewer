@@ -2,7 +2,6 @@
 
 <div align="right">
 Author: Hiroshi Ban<br>
-Publication preparation: "2026-11-07"<br>
 Last Update: "2026-11-07"
 </div>
 
@@ -19,9 +18,6 @@ Last Update: "2026-11-07"
 **A MATLAB viewer for 360° VR images and videos.**
 
 ![A person enjoying a panoramic VR landscape](doc/images/spherical_viewer_concept.png)
-
-*Concept illustration created with OpenAI image generation. SphericalViewer
-inspects VR media on a desktop display; it does not provide HMD output.*
 
 SphericalViewer was developed by **Hiroshi Ban** to inspect panoramic images
 and videos while preparing experiments in visual psychology and neuroscience.
@@ -41,7 +37,7 @@ Psychtoolbox-3/OpenGL viewers.
 - [Acknowledgments](#acknowledgments)
 - [License](#license)
 - [Citation and contact](#citation)
-- [Current status and limitations](#status)
+- [Limitations](#status)
 
 ***
 
@@ -59,10 +55,10 @@ stereo inputs are previewed through a single eye**: the top image for
 over-under, or the left image for side-by-side. HMD output, head tracking,
 and binocular stereo presentation are outside the current implementation.
 
-![MATLAB perspective view of the Okinawa panorama](doc/images/sample_view.jpg)
+![A 360-degree panorama and its selected perspective view](doc/images/sample_view.png)
 
-*The supplied panorama rendered by the standard MATLAB image viewer.
-Sample-derived image: CC BY-NC 4.0, Hiroshi Ban.*
+*A selected direction and field of view within the 360-degree panorama are
+shown as a perspective view. Illustration: CC BY-NC 4.0, Hiroshi Ban.*
 
 The project is shared to support open and transparent research and to help
 others learn how to work with VR material in MATLAB. Thank you for using
@@ -73,7 +69,7 @@ this software. I hope SphericalViewer can help your research projects.
 <a id="system"></a>
 ## System requirements
 
-- **MATLAB** with desktop graphics. Publication checks use **MATLAB R2023b
+- **MATLAB** with desktop graphics. Tested with **MATLAB R2023b
   Update 11 on Windows**; see the [validation record](doc/VALIDATION.md).
   Earlier releases, macOS, Linux, and GNU Octave have not been validated.
 - The standard viewers require **no additional MathWorks toolboxes**.
@@ -116,7 +112,7 @@ SphericalViewer(videoType, filepath, renderer)
 | `filepath` | Image/video path; `[]` opens a file dialog | File dialog |
 | `renderer` | `'matlab'` or `'ptb'` | `'matlab'` |
 
-The layout is selected explicitly. The original argument name `videoType`
+The layout is selected explicitly. The argument `videoType`
 applies to both images and videos. The common entry point routes `.mp4`,
 `.mov`, `.avi`, and `.m4v` files to a video viewer; other extensions go to
 the image viewer. Cancelling the file dialog returns without opening a display.
@@ -199,10 +195,9 @@ been cleared, as confirmed by Hiroshi Ban.** The samples are shared under
 **CC BY-NC 4.0**, allowing noncommercial reuse and adaptation with attribution
 and an indication of changes.
 
-The movie is an excerpt copied without re-encoding from the original
-recording. It is below [GitHub's 100 MiB file limit](https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-large-files-on-github),
-so Git LFS is unnecessary. See the [sample notes](samples/README.md) for
-provenance and preparation details, and the [sample license](samples/LICENSE.md)
+The movie is a nine-second excerpt copied without re-encoding from the
+original recording. See the [sample notes](samples/README.md) for provenance
+and media specifications, and the [sample license](samples/LICENSE.md)
 for attribution and reuse terms.
 
 [back to the menu](#menu)
@@ -227,12 +222,6 @@ SphericalViewer/
     images/                    README illustrations
 ```
 
-The working directory was originally called `SphericalPlayer`, and the four
-individual functions used `Player` in their names. The public name is now
-**SphericalViewer**, reflecting the inspection of both still images and
-videos. Update older calls from `SphericalImagePlayer` to
-`SphericalImageViewer`, and likewise for the other three functions.
-
 [back to the menu](#menu)
 
 <a id="acknowledgments"></a>
@@ -243,10 +232,8 @@ its OpenGL interface. Acknowledge Psychtoolbox in research using that path,
 following the guidance for your installed version. MATLAB is a registered
 trademark of The MathWorks, Inc.
 
-Hiroshi Ban commissioned and provided the sample photography and video.
-OpenAI Codex assisted with code review, publication preparation, maintenance,
-English documentation, and the concept illustration. Hiroshi Ban is the
-author and is responsible for the software and its release.
+Hiroshi Ban developed the initial version of SphericalViewer. He also
+commissioned and provided the sample photography and video.
 
 [back to the menu](#menu)
 
@@ -265,31 +252,21 @@ author and is responsible for the software and its release.
 <a id="citation"></a>
 ## Citation and contact
 
-If SphericalViewer contributes to your research, please cite the software
-and identify the release or commit used. GitHub can read the supplied
-[CITATION.cff](CITATION.cff). No dedicated software paper or DOI is currently
-associated with this project.
+If SphericalViewer contributes to your research, please cite it as follows:
 
 > Ban, H. (2026). *SphericalViewer: A MATLAB viewer for 360-degree VR images
-> and videos* [Computer software]. GitHub. Include the repository URL and
-> the release or commit used.
+> and videos* [Computer software]. GitHub.
+> [https://github.com/hiroshiban/SphericalViewer](https://github.com/hiroshiban/SphericalViewer)
 
 Contact Hiroshi Ban through his [GitHub profile](https://github.com/hiroshiban)
-or the repository's issue tracker once published. Bug reports should include
-the MATLAB/PTB versions, operating system, renderer, media layout, and error
-message. Related projects:
-[Retinotopy](https://github.com/hiroshiban/Retinotopy),
-[ImagesShow](https://github.com/hiroshiban/ImagesShow), and
-[Mcalibrator2](https://github.com/hiroshiban/Mcalibrator2).
+or the repository's [issue tracker](https://github.com/hiroshiban/SphericalViewer/issues).
+Bug reports should include the MATLAB/PTB versions, operating system,
+renderer, media layout, and error message.
 
 [back to the menu](#menu)
 
 <a id="status"></a>
-## Current status and limitations
-
-This is a small inspection utility being prepared for its first public
-release. The [validation record](doc/VALIDATION.md) distinguishes automated
-checks from visual/hardware checks.
+## Limitations
 
 - Standard MATLAB playback aims for the source frame rate, but decoding and
   drawing can slow it down. It provides no frame-accurate timing guarantee.
@@ -299,6 +276,6 @@ checks from visual/hardware checks.
 - Fullscreen PTB rendering, texture orientation, device-specific wheel
   behavior, and audio need checking on the intended setup.
 - Playback is once through. Pause, seeking, looping, bottom/right-eye
-  selection, and HMD/head-tracking integration are possible future additions.
+  selection, and HMD/head-tracking integration are not supported.
 
 [back to the menu](#menu)

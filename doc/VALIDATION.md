@@ -54,9 +54,9 @@ addpath('doc');
 validate_SphericalViewer;
 ```
 
-Generated fixtures and the preview are written under `.runtime/`, which is
-excluded from Git. The public README preview is copied separately into
-`doc/images/sample_view.jpg`. Source inspection of the PTB cleanup guards
+Generated fixtures and the MATLAB preview are written under `.runtime/`,
+which is excluded from Git. The README uses a separate explanatory diagram
+at `doc/images/sample_view.png`. Source inspection of the PTB cleanup guards
 and texture-coordinate conversion is not a substitute for running that path.
 
 ## Remaining interactive/hardware checks

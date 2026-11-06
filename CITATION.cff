@@ -2,6 +2,7 @@ cff-version: 1.2.0
 message: "If you use SphericalViewer in your research, please cite the software and identify the revision used."
 type: software
 title: "SphericalViewer: A MATLAB viewer for 360-degree VR images and videos"
+repository-code: "https://github.com/hiroshiban/SphericalViewer"
 authors:
   - family-names: Ban
     given-names: Hiroshi

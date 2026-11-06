@@ -6,7 +6,7 @@ The following media are made available by **Hiroshi Ban** under the
 
 - `sample_360deg_VR_image.jpg`
 - `sample_360deg_VR_movie.mp4`
-- The sample-derived preview `../doc/images/sample_view.jpg`.
+- The sample-derived panorama/view diagram `../doc/images/sample_view.png`.
 - The generated concept illustration `../doc/images/spherical_viewer_concept.png`.
 
 The license's [full legal text](https://creativecommons.org/licenses/by-nc/4.0/legalcode.en)
