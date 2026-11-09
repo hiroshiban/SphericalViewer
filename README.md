@@ -2,7 +2,7 @@
 
 <div align="right">
 Author: Hiroshi Ban<br>
-Last Update: "2026-11-07"
+Last Update: "2026-11-09 22:33:46 ban"
 </div>
 
 <br>
@@ -19,8 +19,8 @@ Last Update: "2026-11-07"
 
 ![A person enjoying a panoramic VR landscape](doc/images/spherical_viewer_concept.png)
 
-SphericalViewer was developed by **Hiroshi Ban** to inspect panoramic images
-and videos while preparing experiments in visual psychology and neuroscience.
+SphericalViewer was developed to inspect panoramic images and videos
+while preparing experiments in visual psychology and neuroscience.
 It provides lightweight MATLAB graphics viewers and optional fullscreen
 Psychtoolbox-3/OpenGL viewers.
 
